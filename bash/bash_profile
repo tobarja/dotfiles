@@ -20,7 +20,12 @@ HISTSIZE=1000
 HISTFILESIZE=10000
 
 # capture my SSH_AUTH for use in screen
-set | grep SSH_AUTH > ~/.sshauth
+# set | grep SSH_AUTH > ~/.sshauth # old method, need to test before i delete it
+case "$TERM" in
+    xterm) env | grep '^SSH_AUTH_SOCK' >~/.sshauth;;
+    screen) source ~/.sshauth;;
+esac
+
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
