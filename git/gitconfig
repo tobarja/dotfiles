@@ -1,0 +1,8 @@
+[user]
+        name = Andrew Thompson
+        email = andrewkt@aktzero.com
+[core]
+        editor = vi
+[alias]
+        stat = status
+        ci = commit

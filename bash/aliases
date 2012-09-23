@@ -1,0 +1,20 @@
+# From: https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
+# Easier navigation: .., ..., ....
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+# Enable aliases to be sudo.ed
+alias sudo='sudo '
+
+# Gzip-enabled `curl`
+alias gurl="curl --compressed"
+
+
+# My own, or pulled from other various places on the internet before now
+
+alias cd..='cd ..'
+
+alias screen="TERM=screen screen"
+
+alias more='less'
