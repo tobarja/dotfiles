@@ -1,0 +1,3 @@
+[default]
+;overide any default options here
+loglevel => 6
