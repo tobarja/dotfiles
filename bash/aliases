@@ -10,7 +10,6 @@ alias sudo='sudo '
 # Gzip-enabled `curl`
 alias gurl="curl --compressed"
 
-
 # My own, or pulled from other various places on the internet before now
 
 alias cd..='cd ..'
@@ -20,3 +19,10 @@ alias screen="TERM=screen screen"
 alias more='less'
 
 alias authload='export `cat ~/.sshauth`'
+
+alias free="free -m"
+
+alias update="sudo aptitude update"
+alias install="sudo aptitude install"
+alias upgrade="sudo aptitude safe-upgrade"
+alias remove="sudo aptitude remove"
