@@ -19,5 +19,8 @@ export LANG="en_US"
 HISTSIZE=1000
 HISTFILESIZE=10000
 
+# capture my SSH_AUTH for use in screen
+set | grep SSH_AUTH > ~/.sshauth
+
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion

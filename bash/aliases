@@ -18,3 +18,5 @@ alias cd..='cd ..'
 alias screen="TERM=screen screen"
 
 alias more='less'
+
+alias authload='export `cat ~/.sshauth`'
