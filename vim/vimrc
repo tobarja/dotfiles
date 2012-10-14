@@ -1,4 +1,49 @@
+set nocompatible
+
 syntax on
-filetype indent plugin on
+
+if has("autocmd")
+    filetype indent plugin on
+endif
+
+set expandtab
+set smarttab
+
+set shiftwidth=4
+set softtabstop=4
+
 set modeline
+
+set scrolloff=5               " keep at least 5 lines above/below
+
+" Highlight line under cursor
+set cursorline
+" hi CursorLine term=none cterm=none
+
+" Create Blank Newlines and stay in Normal mode
+nnoremap <silent> zj o<Esc>
+nnoremap <silent> zk O<Esc>
+
+" Create Blank Newlines and stay in Normal mode
+nnoremap <silent> zj o<Esc>
+nnoremap <silent> zk O<Esc>
+
+" Fix Ctrl-U and Ctrl-W
+" http://vim.wikia.com/wiki/Recover_from_accidental_Ctrl-U
+inoremap <c-u> <c-g>u<c-u>
+inoremap <c-w> <c-g>u<c-w>
+
+" Line Numbers, Yay!
+set number
+
+" Buffers
+map <C-j> :bprev<CR>
+map <C-k> :bnext<CR>
+set hidden " this will go along
+
+
+" Easy Save
+map <F1> <Esc>:w<CR>
+map! <F1> <Esc>:w<CR>
+
 au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
