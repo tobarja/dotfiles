@@ -29,10 +29,6 @@ set cursorline
 nnoremap <silent> zj o<Esc>
 nnoremap <silent> zk O<Esc>
 
-" Create Blank Newlines and stay in Normal mode
-nnoremap <silent> zj o<Esc>
-nnoremap <silent> zk O<Esc>
-
 " Fix Ctrl-U and Ctrl-W
 " http://vim.wikia.com/wiki/Recover_from_accidental_Ctrl-U
 inoremap <c-u> <c-g>u<c-u>
