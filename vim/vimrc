@@ -2,6 +2,9 @@ set nocompatible
 
 syntax on
 
+set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{hostname()}
+set title
+
 if has("autocmd")
     filetype indent plugin on
 endif
@@ -15,6 +18,8 @@ set softtabstop=4
 set modeline
 
 set scrolloff=5               " keep at least 5 lines above/below
+
+set colorcolumn=79
 
 " Highlight line under cursor
 set cursorline
