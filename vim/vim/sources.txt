@@ -1,0 +1,5 @@
+doc/fugitive.txt: https://github.com/tpope/vim-fugitive/raw/master/doc/fugitive.txt
+plugin/fugitive.vim: https://github.com/tpope/vim-fugitive/raw/master/plugin/fugitive.vim
+plugin/linters.vim: https://bitbucket.org/tim_heap/linters.vim/raw/master/plugin/linters.vim
+plugin/makegreen.vim: https://raw.github.com/reinh/vim-makegreen/master/plugin/makegreen.vim
+compiler/nose.vim: https://raw.github.com/olethanh/Vim-nosecompiler/master/compiler/nose.vim
