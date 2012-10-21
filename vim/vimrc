@@ -1,9 +1,20 @@
 set nocompatible
 
+set encoding=utf-8
+
+set background=dark
+colorscheme delek
+
 syntax on
 
-set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{hostname()}
 set title
+let &titleold=hostname()
+set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{hostname()}
+
+" Source the vimrc file after saving it
+if has("autocmd")
+   autocmd bufwritepost .vimrc source $MYVIMRC
+endif
 
 if has("autocmd")
     filetype indent plugin on
@@ -12,6 +23,7 @@ endif
 set expandtab
 set smarttab
 
+set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
@@ -42,9 +54,14 @@ map <C-j> :bprev<CR>
 map <C-k> :bnext<CR>
 set hidden " this will go along
 
+nmap <leader>l :set list!<CR>
+nmap <leader>v :tabedit $MYVIMRC<CR>
 
-" Easy Save
+" Function keys
 map <F1> <Esc>:w<CR>
 map! <F1> <Esc>:w<CR>
-
-au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
+set pastetoggle=<F2>
+nnoremap <Leader><F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+"map <Leader><F2> :call CleanText()<CR>
+map <Leader><F3> :call <SID>StripTrailingWhitespaces()<CR>
+" F8 == <C-[>OW
