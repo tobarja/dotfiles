@@ -55,6 +55,7 @@ map <C-k> :bnext<CR>
 set hidden " this will go along
 
 nmap <leader>l :set list!<CR>
+set listchars=tab:>.,eol:¬
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " Function keys
