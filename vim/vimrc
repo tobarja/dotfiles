@@ -1,4 +1,6 @@
 set nocompatible
+set mouse=a
+let mapleader = ","
 
 set encoding=utf-8
 
@@ -29,7 +31,7 @@ set softtabstop=4
 
 set modeline
 
-set scrolloff=5               " keep at least 5 lines above/below
+set scrolloff=5 " keep at least 5 lines above/below
 
 set colorcolumn=79
 
@@ -46,6 +48,10 @@ nnoremap <silent> zk O<Esc>
 inoremap <c-u> <c-g>u<c-u>
 inoremap <c-w> <c-g>u<c-w>
 
+" easier moving of code blocks
+vnoremap < <gv " better indentation
+vnoremap > >gv " better indentation
+
 " Line Numbers, Yay!
 set number
 
@@ -55,14 +61,14 @@ map <C-k> :bnext<CR>
 set hidden " this will go along
 
 nmap <leader>l :set list!<CR>
+set list
 set listchars=tab:>.,eol:¬
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " Function keys
 map <F1> <Esc>:w<CR>
 map! <F1> <Esc>:w<CR>
-set pastetoggle=<F2>
-nnoremap <Leader><F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>:set invpaste<CR>:set list!<CR>
 "map <Leader><F2> :call CleanText()<CR>
 map <Leader><F3> :call <SID>StripTrailingWhitespaces()<CR>
 " F8 == <C-[>OW
