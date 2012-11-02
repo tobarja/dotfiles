@@ -8,3 +8,5 @@ map <buffer> <C-[>OT <Esc>:w<CR>:!/usr/bin/env python % <CR>
 map <buffer> <C-[>OU :new <Bar>:set buftype=nofile<Bar>set bufhidden=hide<Bar> r ! nosetests #<CR><CR>
 
 set foldmethod=indent
+
+set colorcolumn=79

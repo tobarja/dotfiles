@@ -33,8 +33,6 @@ set modeline
 
 set scrolloff=5 " keep at least 5 lines above/below
 
-set colorcolumn=79
-
 " Highlight line under cursor
 set cursorline
 " hi CursorLine term=none cterm=none
