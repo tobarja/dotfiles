@@ -21,6 +21,7 @@ alias more='less'
 alias authload='export `cat ~/.sshauth`'
 
 alias free="free -m"
+alias du1='du -h --max-depth=1'
 
 alias update="sudo aptitude update"
 alias install="sudo aptitude install"
