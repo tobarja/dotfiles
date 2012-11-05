@@ -6,3 +6,8 @@
 [alias]
         stat = status
         ci = commit
+        co = checkout
+        fpo = format-patch --stdout
+        fp = format-patch
+
+# vim: ts=4 sw=4 sts=0
