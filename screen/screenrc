@@ -1,1 +1,3 @@
-defscrollback 10000			# default: 100
+crlf off                        # No Microsoft linebreaks
+startup_message off             # bypass GPL notice (we're aware)
+defscrollback 10000			    # big scrollback
