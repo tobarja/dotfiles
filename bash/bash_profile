@@ -1,7 +1,7 @@
 # From: https://github.com/mathiasbynens/dotfiles/blob/master/.bash_profile
 
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
