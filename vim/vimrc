@@ -66,8 +66,8 @@ nmap <leader>v :tabedit $MYVIMRC<CR>
 " Function keys
 map <F1> <Esc>:w<CR>
 map! <F1> <Esc>:w<CR>
-nmap <F2> <Esc>:set nonumber!<CR>:set foldenable!<CR>:set invpaste<CR>:set list!<CR>
-imap <F2> <Esc>:set nonumber!<CR>:set foldenable!<CR>:set invpaste<CR>:set list!<CR>
+nmap <F2> <Esc>:set nonumber!<CR>:set invpaste<CR>:set list!<CR>
+imap <F2> <Esc>:set nonumber!<CR>:set invpaste<CR>:set list!<CR>
 map <Leader><F2> :set foldenable!<CR>
 map <Leader><F3> :call <SID>StripTrailingWhitespaces()<CR>
 " F8 == <C-[>OW
