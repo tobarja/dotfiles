@@ -1,5 +1,5 @@
 set nocompatible
-set mouse=n
+set mouse=nv
 let mapleader = ","
 
 set encoding=utf-8
