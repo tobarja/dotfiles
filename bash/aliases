@@ -14,7 +14,11 @@ alias gurl="curl --compressed"
 
 alias cd..='cd ..'
 
-alias screen="TERM=screen screen"
+if [ $TERM = 'xterm-256color' ]; then
+    alias screen="TERM=screen-256color screen -T screen-256color"
+else
+    alias screen="TERM=screen screen"
+fi
 
 alias more='less'
 
