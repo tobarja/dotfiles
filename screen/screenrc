@@ -1,3 +1,4 @@
 crlf off                        # No Microsoft linebreaks
 startup_message off             # bypass GPL notice (we're aware)
 defscrollback 10000			    # big scrollback
+caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= @%H"
