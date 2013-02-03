@@ -25,6 +25,7 @@ case "$TERM" in
     xterm) env | grep '^SSH_AUTH_SOCK' >~/.sshauth;;
     xterm-256color) env | grep '^SSH_AUTH_SOCK' >~/.sshauth;;
     screen) source ~/.sshauth;;
+    screen-256color) source ~/.sshauth;;
 esac
 
 # If possible, add tab completion for many more commands
