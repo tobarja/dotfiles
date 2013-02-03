@@ -1,3 +1,7 @@
 [default]
 ;overide any default options here
-loglevel => 6
+loglevel => 5
+key_f7 => /log notice
+key_f8 => /log debug
+key_f10 => sofia global siptrace on
+key_f11 => sofia global siptrace off
