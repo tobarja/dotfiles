@@ -1,0 +1,1 @@
+ix  ->  curl http://ix.io/client -o ix
