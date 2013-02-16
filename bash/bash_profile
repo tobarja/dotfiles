@@ -22,10 +22,10 @@ HISTFILESIZE=10000
 # capture my SSH_AUTH for use in screen
 # set | grep SSH_AUTH > ~/.sshauth # old method, need to test before i delete it
 case "$TERM" in
-    xterm) env | grep '^SSH_AUTH_SOCK' >~/.sshauth;;
-    xterm-256color) env | grep '^SSH_AUTH_SOCK' >~/.sshauth;;
-    screen) export `cat ~/.sshauth`;;
-    screen-256color) export `cat ~/.sshauth`;;
+    xterm) env | grep '^SSH_AUTH_SOCK' >~/.sshauth-$HOSTNAME;;
+    xterm-256color) env | grep '^SSH_AUTH_SOCK' >~/.sshauth-$HOSTNAME;;
+    screen) export `cat ~/.sshauth-$HOSTNAME`;;
+    screen-256color) export `cat ~/.sshauth-$HOSTNAME`;;
 esac
 
 # If possible, add tab completion for many more commands
