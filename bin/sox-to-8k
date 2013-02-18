@@ -1,0 +1,7 @@
+#!/bin/bash
+filename=$(basename "$1")
+extension="${filename##*.}"
+filename="${filename%.*}"
+#echo $extension
+#echo $filename
+sox -v 0.4 "$filename.$extension" -r 8k -c 1 -s "$filename-soxed.wav"
