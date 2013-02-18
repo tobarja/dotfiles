@@ -22,7 +22,7 @@ fi
 
 alias more='less'
 
-alias authload='export `cat ~/.sshauth`'
+alias authload='export `cat ~/.sshauth-$HOSTNAME`'
 
 alias free="free -m"
 alias du1='du -h --max-depth=1'
