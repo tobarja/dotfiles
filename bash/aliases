@@ -34,6 +34,6 @@ alias install="sudo aptitude install"
 alias upgrade="sudo aptitude safe-upgrade"
 alias remove="sudo aptitude remove"
 
-if [ `hostname -s` = 'teros' ]; then
+if [ -f ~/bin/fs_cli ]; then
     alias fs="screen -R -D fs"
 fi
