@@ -1,13 +1,14 @@
 [user]
-        name = Andrew Thompson
-        email = andrewkt@aktzero.com
+    name = Andrew Thompson
+    email = andrewkt@aktzero.com
 [core]
-        editor = vi
+    editor = vi
 [alias]
-        stat = status
-        ci = commit
-        co = checkout
-        fpo = format-patch --stdout
-        fp = format-patch
+    stat = status
+    ci = commit
+    co = checkout
+    fpo = format-patch --stdout
+    fp = format-patch
+    br = branch
 
 # vim: ts=4 sw=4 sts=0
