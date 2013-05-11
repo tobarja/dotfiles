@@ -35,5 +35,8 @@ case "$TERM" in
     screen-256color) export `cat ~/.sshauth-$HOSTNAME`;;
 esac
 
+# Ruby gem local install folder
+export GEM_HOME=~/.local/gems
+
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
