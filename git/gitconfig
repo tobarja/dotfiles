@@ -13,6 +13,7 @@
     co = checkout
     fpo = format-patch --stdout
     fp = format-patch
+    pull = pull --ff-only
     br = branch
 
 [sendemail]
