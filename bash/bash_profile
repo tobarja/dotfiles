@@ -1,5 +1,12 @@
 # From: https://github.com/mathiasbynens/dotfiles/blob/master/.bash_profile
 
+# some environment defaults
+EMAIL="Andrew Thompson <andrewkt@aktzero.com>"
+EDITOR="vi"
+
+DEBFULLNAME="Andrew Thompson"
+DEBEMAIL="<andrewkt@aktzero.com>"
+
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
