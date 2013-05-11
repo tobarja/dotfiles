@@ -13,6 +13,7 @@
     co = checkout
     fpo = format-patch --stdout
     fp = format-patch
+    pff = pull --ff-only
     pull = pull --ff-only
     br = branch
 
