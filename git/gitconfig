@@ -1,8 +1,12 @@
+# vim: ts=4 sw=4 sts=0
+
 [user]
     name = Andrew Thompson
     email = andrewkt@aktzero.com
+
 [core]
     editor = vi
+
 [alias]
     stat = status
     ci = commit
@@ -11,4 +15,8 @@
     fp = format-patch
     br = branch
 
-# vim: ts=4 sw=4 sts=0
+[sendemail]
+    supressfrom = true
+
+[color]
+    ui = auto
