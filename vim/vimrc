@@ -2,6 +2,8 @@ set nocompatible
 set mouse=nv
 let mapleader = ","
 
+set noswapfile
+
 "encoding and file formats
 set encoding=utf8
 try
