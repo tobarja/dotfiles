@@ -16,6 +16,7 @@
     pff = pull --ff-only
     pull = pull --ff-only
     br = branch
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
 [sendemail]
     supressfrom = true
