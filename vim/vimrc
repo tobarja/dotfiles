@@ -44,7 +44,7 @@ set modeline
 set scrolloff=5 " keep at least 5 lines above/below
 
 " Highlight line under cursor
-set cursorline
+" set cursorline
 " hi CursorLine term=none cterm=none
 
 " Create Blank Newlines and stay in Normal mode
