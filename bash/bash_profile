@@ -39,4 +39,14 @@ esac
 export GEM_HOME=~/.local/gems
 
 # If possible, add tab completion for many more commands
-[ -f /etc/bash_completion ] && source /etc/bash_completion
+#[ -f /etc/bash_completion ] && source /etc/bash_completion
+if [ -f /etc/bash_completion ]; then
+    if [ -f /etc/lsb-release ]; then
+        DISTRIB_CODENAME=`grep "DISTRIB_CODENAME" /etc/lsb-release | cut -d = -f 2`
+        case "$DISTRIB_CODENAME" in
+            lucid);;
+            precise);;
+            *) echo "$DISTRIB_CODENAME" && source /etc/bash_completion ;;
+        esac
+    fi
+fi
