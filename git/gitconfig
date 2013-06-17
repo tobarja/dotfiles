@@ -8,19 +8,23 @@
     editor = vi
 
 [alias]
-    stat = status
     ci = commit
+    ca = commit --amend
     co = checkout
     cob = checkout -b
+    br = branch
     fpo = format-patch --stdout
     fp = format-patch
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
     pff = pull --ff-only
     pull = pull --ff-only
-    br = branch
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    stat = status
+    up = !git fetch origin && git rebase origin/master
 
 [sendemail]
     supressfrom = true
 
 [color]
     ui = auto
+[merge]
+    ff = only
