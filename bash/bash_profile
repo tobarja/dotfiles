@@ -46,7 +46,8 @@ if [ -f /etc/bash_completion ]; then
         case "$DISTRIB_CODENAME" in
             lucid);;
             precise);;
-            *) echo "$DISTRIB_CODENAME" && source /etc/bash_completion ;;
+            *) source /etc/bash_completion ;;
         esac
+        unset DISTRIB_CODENAME
     fi
 fi
