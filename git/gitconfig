@@ -11,6 +11,7 @@
     stat = status
     ci = commit
     co = checkout
+    cob = checkout -b
     fpo = format-patch --stdout
     fp = format-patch
     pff = pull --ff-only
