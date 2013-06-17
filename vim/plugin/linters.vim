@@ -136,4 +136,4 @@ if executable("dot")
 endif
 
 
-au BufWritePost * call s:RunLinter()
+"au BufWritePost * call s:RunLinter()
