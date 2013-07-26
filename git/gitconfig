@@ -26,5 +26,9 @@
 
 [color]
     ui = auto
+
 [merge]
     ff = only
+
+[push]
+	default = simple
