@@ -31,4 +31,5 @@
     ff = only
 
 [push]
-	default = simple
+	default = upstream
+    #simple is not supported on ubuntu 12.04LTS because git is too old
