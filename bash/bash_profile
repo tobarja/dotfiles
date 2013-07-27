@@ -26,14 +26,14 @@ export LANG="en_US"
 HISTSIZE=1000
 HISTFILESIZE=10000
 
-# capture my SSH_AUTH for use in screen
-# set | grep SSH_AUTH > ~/.sshauth # old method, need to test before i delete it
-case "$TERM" in
-    xterm) env | grep '^SSH_AUTH_SOCK' >~/.sshauth-$HOSTNAME;;
-    xterm-256color) env | grep '^SSH_AUTH_SOCK' >~/.sshauth-$HOSTNAME;;
-    screen) export `cat ~/.sshauth-$HOSTNAME`;;
-    screen-256color) export `cat ~/.sshauth-$HOSTNAME`;;
-esac
+# capture my SSH_AUTH for use in screen/tmux
+if [[ "$STY" || "$TMUX" ]]; then
+    if [[ -f ~/.sshauth-$HOSTNAME && -s ~/.sshauth-$HOSTNAME ]]; then
+        export `cat ~/.sshauth-$HOSTNAME`
+    fi
+else
+    env | grep '^SSH_AUTH_SOCK' >~/.sshauth-$HOSTNAME
+fi
 
 # If possible, add tab completion for many more commands
 #[ -f /etc/bash_completion ] && source /etc/bash_completion
