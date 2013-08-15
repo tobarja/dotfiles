@@ -37,3 +37,5 @@ alias remove="sudo aptitude remove"
 if [ -f ~/bin/fs_cli ]; then
     alias fs="screen -R -D fs"
 fi
+
+alias tmux="tmux attach || tmux"
