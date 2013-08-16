@@ -2,9 +2,6 @@ set nocompatible
 set mouse=nv
 let mapleader = ","
 
-:imap ;; <Esc>
-:imap ii <Esc>
-
 set noswapfile
 
 "encoding and file formats
