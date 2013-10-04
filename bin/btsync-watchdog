@@ -7,24 +7,44 @@ usage() {
     exit 0
 }
 
-case $1 in
-    start ) if [ -z $MYSERVICE_PID ];then
+cron() {
+    if [ -z $MYSERVICE_PID ];then
         $HOME/bin/btsync --config $HOME/.sync/sync.conf >> $HOME/.sync/watchdog.log
-        else
-            echo "btsync is already running"
-        fi
-        ;;
-    stop ) if [ -n $MYSERVICE_PID ];then
+    fi
+}
+
+start() {
+    if [ -z $MYSERVICE_PID ];then
+        $HOME/bin/btsync --config $HOME/.sync/sync.conf >> $HOME/.sync/watchdog.log
+    else
+        echo "btsync is already running"
+    fi
+}
+
+stop() {
+    if [ -n $MYSERVICE_PID ];then
         killall btsync
-        else
-            echo "btsync is already stopped"
-        fi
+    else
+        echo "btsync is already stopped"
+    fi
+}
+
+status() {
+    if [ -z $MYSERVICE_PID ];then
+        echo "btsync is not running"
+    else
+        echo "btsync is running"
+    fi
+}
+
+case $1 in
+    cron ) cron
         ;;
-    status) if [ -z $MYSERVICE_PID ];then
-            echo "btsync is not running"
-        else
-            echo "btsync is running"
-        fi
+    start ) start
+        ;;
+    stop ) stop
+        ;;
+    status) status
         ;;
     *) usage
         ;;
