@@ -1,0 +1,20 @@
+#!/bin/bash
+
+case "$1" in
+  hibernate)
+    # put commands to run on hibernation here
+    ifdown eth0 || true
+    rmmod alx || true
+    ;;
+  thaw)
+    # put commands to run when returning from hibernation here
+    modprobe alx || true
+    ifup eth0 || true
+    ;;
+  suspend)
+    # put commands to run on suspend here
+    ;;
+  resume) 
+    # put commands to run when returning from suspension
+    ;;
+esac
