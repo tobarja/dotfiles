@@ -4,6 +4,11 @@ let mapleader = ","
 
 set noswapfile
 
+"make searches case insensitive
+set ignorecase
+"except when I type a capital letter in the search
+set smartcase
+
 "encoding and file formats
 set encoding=utf8
 try
@@ -12,7 +17,11 @@ catch
 endtry
 
 set background=dark
-colorscheme delek
+try
+    colorscheme vividchalk
+catch /^Vim\%((\a\+)\)\=:E185/
+    :silent
+endtry
 
 syntax on
 
@@ -70,7 +79,12 @@ set hidden " this will go along
 
 nmap <leader>l :set list!<CR>
 set list
-set listchars=tab:>.,eol:¬
+set listchars=tab:»·,trail:·
+	
+    
+highlight SpecialKey ctermfg=Red guifg=Red
+"highlight NonText cterm=reverse
+
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " Function keys
