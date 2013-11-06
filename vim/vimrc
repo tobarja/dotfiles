@@ -34,7 +34,7 @@ set laststatus=2
 
 " Source the vimrc file after saving it
 if has("autocmd")
-   autocmd bufwritepost .vimrc source $MYVIMRC
+    autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
 if has("autocmd")
@@ -68,6 +68,16 @@ inoremap <c-w> <c-g>u<c-w>
 " easier moving of code blocks
 vnoremap < <gv " better indentation
 vnoremap > >gv " better indentation
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+vnoremap <S-Tab> <
+vnoremap <Tab> >
+
+" Use the system copy buffer!
+vnoremap <C-c> "+y
+vnoremap <C-x> "+x
+noremap <C-v> "+P
+noremap! <C-v> <Esc>"+P
 
 " Line Numbers, Yay!
 set number
@@ -77,21 +87,34 @@ map <C-j> :bprev<CR>
 map <C-k> :bnext<CR>
 set hidden " this will go along
 
-nmap <leader>l :set list!<CR>
+nnoremap <leader>l :set list!<CR>
 set list
 set listchars=tab:»·,trail:·
-	
-    
+
+
 highlight SpecialKey ctermfg=Red guifg=Red
 "highlight NonText cterm=reverse
 
-nmap <leader>v :tabedit $MYVIMRC<CR>
+nnoremap <leader>v :tabedit $MYVIMRC<CR>
+noremap h :tabprevious<CR>
+noremap l :tabnext<CR>
 
 " Function keys
-map <F1> <Esc>:w<CR>
-map! <F1> <Esc>:w<CR>
-nmap <F2> <Esc>:set nonumber!<CR>:set invpaste<CR>:set list!<CR>
-imap <F2> <Esc>:set nonumber!<CR>:set invpaste<CR>:set list!<CR>
-map <Leader><F2> :set foldenable!<CR>
-map <Leader><F3> :call <SID>StripTrailingWhitespaces()<CR>
+noremap <F1> <Esc>:w<CR>
+noremap! <F1> <Esc>:w<CR>
+noremap <C-s> <Esc>:w<CR>
+noremap! <C-s> <Esc>:w<CR>
+nnoremap <F2> <Esc>:set nonumber!<CR>:set invpaste<CR>:set list!<CR>
+inoremap <F2> <Esc>:set nonumber!<CR>:set invpaste<CR>:set list!<CR>
+noremap <Leader><F2> :set foldenable!<CR>
+noremap <F3> <Esc>gg=G''
+noremap! <F3> <Esc>gg=G''
+" map <Leader><F3> :call <SID>StripTrailingWhitespaces()<CR>
 " F8 == <C-[>OW
+
+" Execute file being edited with F5:
+noremap <buffer> <F5> <Esc>:w<CR>:!./% <CR>
+noremap <buffer> <C-[>OT <Esc>:w<CR>:!./% <CR>
+
+
+let g:neocomplcache_enable_at_startup = 1
