@@ -14,6 +14,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'Yggdroot/indentLine'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
+Bundle 'reinh/vim-makegreen'
 
 set mouse=nv
 let mapleader = ","
