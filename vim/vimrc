@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " My bundles
@@ -111,7 +111,9 @@ set hidden " this will go along
 nnoremap <leader>l :set list!<CR>
 set list
 set listchars=tab:»·,trail:·
-
+    
+	
+set showbreak=↪
 
 highlight SpecialKey ctermfg=Red guifg=Red
 "highlight NonText cterm=reverse
