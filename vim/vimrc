@@ -15,6 +15,7 @@ Bundle 'Yggdroot/indentLine'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'reinh/vim-makegreen'
+Bundle 'airblade/vim-gitgutter'
 
 set mouse=nv
 let mapleader = ","
