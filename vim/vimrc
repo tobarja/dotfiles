@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 " My bundles
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'Raimondi/delimitMate'
+Bundle 'Yggdroot/indentLine'
 
 set mouse=nv
 let mapleader = ","
