@@ -1,2 +1,0 @@
-plugin/linters.vim: https://bitbucket.org/tim_heap/linters.vim/raw/master/plugin/linters.vim
-compiler/nose.vim: https://raw.github.com/olethanh/Vim-nosecompiler/master/compiler/nose.vim
