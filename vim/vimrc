@@ -60,6 +60,10 @@ set scrolloff=5 " keep at least 5 lines above/below
 nnoremap <silent> zj o<Esc>
 nnoremap <silent> zk O<Esc>
 
+" Begining & End of line in Normal mode
+noremap H ^
+noremap L g_
+
 " Fix Ctrl-U and Ctrl-W
 " http://vim.wikia.com/wiki/Recover_from_accidental_Ctrl-U
 inoremap <c-u> <c-g>u<c-u>
