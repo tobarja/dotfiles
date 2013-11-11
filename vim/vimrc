@@ -12,6 +12,8 @@ Bundle 'gmarik/vundle'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Yggdroot/indentLine'
+Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim'
 
 set mouse=nv
 let mapleader = ","
