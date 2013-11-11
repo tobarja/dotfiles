@@ -8,6 +8,8 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
+" My bundles
+Bundle 'Shougo/neocomplcache.vim'
 
 set mouse=nv
 let mapleader = ","
