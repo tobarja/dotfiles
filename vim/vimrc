@@ -10,6 +10,7 @@ Bundle 'gmarik/vundle'
 
 " My bundles
 Bundle 'Shougo/neocomplcache.vim'
+Bundle 'Raimondi/delimitMate'
 
 set mouse=nv
 let mapleader = ","
