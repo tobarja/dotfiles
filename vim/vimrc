@@ -16,6 +16,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'reinh/vim-makegreen'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'hynek/vim-python-pep8-indent'
 
 set mouse=nv
 let mapleader = ","
