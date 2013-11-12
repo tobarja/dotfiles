@@ -1,2 +1,2 @@
-au FileType ruby setlocal tabstop=8 expandtab shiftwidth=2 softtabstop=2
+au FileType ruby setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
