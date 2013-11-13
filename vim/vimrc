@@ -17,6 +17,9 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'reinh/vim-makegreen'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'hynek/vim-python-pep8-indent'
+Bundle 'tell-k/vim-autopep8'
+"let g:autopep8_disable_show_diff=1
+noremap <buffer> <F8> :call Autopep8()<CR><C-L>
 
 set mouse=nv
 let mapleader = ","
