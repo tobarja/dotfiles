@@ -18,4 +18,5 @@ ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/gemrc ~/.gemrc
 
 ln -s ~/.dotfiles/bin/ix ~/bin/ix
+ln -s ~/.dotfiles/bin/rdp ~/bin/rdp
 ln -s ~/.dotfiles/bin/vcprompt ~/bin/vcprompt
