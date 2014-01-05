@@ -1,0 +1,18 @@
+#!/bin/bash
+
+case "$1" in
+  hibernate)
+    # put commands to run on hibernation here
+    ;;
+  thaw)
+    # put commands to run when returning from hibernation here
+    ;;
+  suspend)
+    # put commands to run on suspend here
+    ifconfig wlan0 down || true
+    ;;
+  resume) 
+    # put commands to run when returning from suspension
+    ifconfig wlan0 up || true
+    ;;
+esac
