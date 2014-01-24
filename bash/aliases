@@ -30,13 +30,12 @@ alias du1='du -h --max-depth=1'
 
 alias is_x64='grep -q "^flags.*\blm\b" /proc/cpuinfo && echo "x86_64" || echo "not x86_64"'
 
-alias update="sudo aptitude update"
-alias install="sudo aptitude install"
-alias upgrade="sudo aptitude safe-upgrade"
-alias remove="sudo aptitude remove"
-
 if [ -f ~/bin/fs_cli ]; then
     alias fs="screen -R -D fs"
 fi
 
 alias tmux="tmux attach || tmux"
+
+alias ack='ack-grep'
+alias code='cd ~/code'
+alias aliases='vi ~/.dotfiles/bash/aliases'
