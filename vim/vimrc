@@ -151,3 +151,5 @@ noremap <buffer> <C-[>OT <Esc>:w<CR>:!./% <CR>
 
 
 let g:neocomplcache_enable_at_startup = 1
+
+let g:html_indent_inctags = "body,head,tbody"
