@@ -10,6 +10,7 @@ DEBEMAIL="<andrewkt@aktzero.com>"
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
+source ~/.profile
 source ~/.aliases
 
 # Prefer US English and use UTF-8
