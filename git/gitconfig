@@ -20,6 +20,8 @@
     pull = pull --ff-only
     stat = status
     up = !git fetch origin && git rebase origin/master
+    unstage = reset HEAD
+    uncommit = reset --soft HEAD^
 
 [sendemail]
     supressfrom = true
@@ -29,6 +31,7 @@
 
 [merge]
     ff = only
+    summary=true
 
 [push]
 	default = upstream
