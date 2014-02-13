@@ -11,6 +11,7 @@
     adp = add --patch
     br = branch
     ci = commit
+    cim = commit -m
     ca = commit --amend
     co = checkout
     cob = checkout -b
@@ -18,7 +19,8 @@
     fp = format-patch
     lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
     pff = pull --ff-only
-    pull = pull --ff-only
+    prb = pull -r
+    rem = remote -v
     stat = status
     unstage = reset HEAD
     uncommit = reset --soft HEAD^
