@@ -13,7 +13,12 @@ alias gurl="curl --compressed"
 # My own, or pulled from other various places on the internet before now
 
 alias cd..='cd ..'
+
+# some more ls aliases
 alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
 
 if [ $TERM = 'xterm-256color' ]; then
     alias screen="TERM=screen-256color screen -T screen-256color"
