@@ -2,26 +2,27 @@
 
 [user]
     name = Andrew Thompson
-    email = andrewkt@aktzero.com
+    email = andrew@tobarja.com
 
 [core]
     editor = vi
 
 [alias]
+    adp = add --patch
+    br = branch
     ci = commit
     ca = commit --amend
     co = checkout
     cob = checkout -b
-    br = branch
     fpo = format-patch --stdout
     fp = format-patch
     lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
     pff = pull --ff-only
     pull = pull --ff-only
     stat = status
-    up = !git fetch origin && git rebase origin/master
     unstage = reset HEAD
     uncommit = reset --soft HEAD^
+    up = !git fetch origin && git rebase origin/master
 
 [sendemail]
     supressfrom = true
@@ -34,5 +35,5 @@
     summary=true
 
 [push]
-	default = upstream
+    default = upstream
     #simple is not supported on ubuntu 12.04LTS because git is too old
