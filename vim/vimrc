@@ -10,6 +10,7 @@ Bundle 'gmarik/vundle'
 
 " My bundles
 Bundle 'Shougo/neocomplcache.vim'
+let g:neocomplcache_enable_at_startup = 1
 Bundle 'Raimondi/delimitMate'
 Bundle 'Yggdroot/indentLine'
 Bundle 'tpope/vim-fugitive'
@@ -106,10 +107,6 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 " easier moving of code blocks
 vnoremap < <gv " better indentation
 vnoremap > >gv " better indentation
-nnoremap <Tab> >>_
-nnoremap <S-Tab> <<_
-vnoremap <S-Tab> <
-vnoremap <Tab> >
 
 " Use the system copy buffer!
 vnoremap <C-c> "+y
@@ -150,7 +147,22 @@ noremap! <F3> <Esc>gg=G''
 noremap <buffer> <F5> <Esc>:w<CR>:!./% <CR>
 noremap <buffer> <C-[>OT <Esc>:w<CR>:!./% <CR>
 
-
-let g:neocomplcache_enable_at_startup = 1
-
 let g:html_indent_inctags = "body,head,tbody"
+
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
+
+nnoremap <silent> n   n:call HLNext(0.4)<cr>
+nnoremap <silent> N   N:call HLNext(0.4)<cr>
+
+" EITHER blink the line containing the match...
+function! HLNext (blinktime)
+    set invcursorline
+    redraw
+    exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
+    set invcursorline
+    redraw
+endfunction
+
+nnoremap  ;  :
+"nnoremap  :  ;
