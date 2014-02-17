@@ -147,7 +147,7 @@ noremap! <F3> <Esc>gg=G''
 noremap <buffer> <F5> <Esc>:w<CR>:!./% <CR>
 noremap <buffer> <C-[>OT <Esc>:w<CR>:!./% <CR>
 
-let g:html_indent_inctags = "body,head,tbody"
+let g:html_indent_inctags = "body,head,li,tbody"
 
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
