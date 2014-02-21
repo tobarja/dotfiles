@@ -53,7 +53,7 @@ set title
 let &titleold=hostname()
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{hostname()}
 
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set statusline=%F%m%r%h%w\ [TYPE=%Y(%{&ff})]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [XY=%04l,%04v][%p%%]
 set laststatus=2
 
 " Source the vimrc file after saving it
