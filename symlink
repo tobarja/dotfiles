@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir ~/bin
 
 ln -s ~/.dotfiles/bash/aliases ~/.aliases
 ln -s ~/.dotfiles/bash/bash_profile ~/.bash_profile
