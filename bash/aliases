@@ -41,6 +41,8 @@ fi
 
 alias tmux="tmux attach || tmux"
 
+alias rdesktop="rdesktop -g 1360x715"
+
 alias ack='ack-grep'
 alias code='cd ~/code'
 alias aliases='vi ~/.dotfiles/bash/aliases'
