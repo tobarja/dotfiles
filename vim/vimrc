@@ -130,7 +130,8 @@ highlight SpecialKey ctermfg=Red guifg=Red
 nnoremap <leader>v :tabedit $MYVIMRC<CR>
 noremap h :tabprevious<CR>
 noremap l :tabnext<CR>
-noremap <C-o> <Esc>:tabnew<CR>:e .<CR>
+nnoremap <leader>o <Esc>:tabnew<CR>:e .<CR>
+nnoremap <Leader>s <Esc>:wa<CR>
 
 " Function keys
 noremap <F1> <Esc>:w<CR>
