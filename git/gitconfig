@@ -9,6 +9,7 @@
 
 [alias]
     adp = add --patch
+    bo = checkout -p
     br = branch
     ci = commit
     cim = commit -m
