@@ -19,6 +19,8 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
+source ~/.shell_colors
+
 #this is for rvm
 test -h ~/.bash_profile || echo "~/.bash_profile is not a symlink"
 test -h ~/.bashrc || echo "~/.bashrc is not a symlink"

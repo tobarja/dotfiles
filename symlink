@@ -5,6 +5,7 @@ ln -s ~/.dotfiles/bash/aliases ~/.aliases
 ln -s ~/.dotfiles/bash/bash_profile ~/.bash_profile
 ln -s ~/.dotfiles/bash/bashrc ~/.bashrc
 ln -s ~/.dotfiles/bash/ubuntu_bashrc ~/.ubuntu_bashrc
+ln -s ~/.dotfiles/bash/shell_colors ~/.shell_colors
 
 ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
 
