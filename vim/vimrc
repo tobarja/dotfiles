@@ -13,6 +13,7 @@ Bundle 'Shougo/neocomplcache.vim'
 let g:neocomplcache_enable_at_startup = 1
 Bundle 'Raimondi/delimitMate'
 Bundle 'Yggdroot/indentLine'
+Bundle 'terryma/vim-expand-region'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'reinh/vim-makegreen'
@@ -139,8 +140,8 @@ noremap! <F1> <Esc>:w<CR>
 nnoremap <F2> <Esc>:set nonumber!<CR>:set invpaste<CR>:set list!<CR>
 inoremap <F2> <Esc>:set nonumber!<CR>:set invpaste<CR>:set list!<CR>
 noremap <Leader><F2> :set foldenable!<CR>
-noremap <F3> <Esc>gg=G''
-noremap! <F3> <Esc>gg=G''
+noremap <F3> <Esc>gg=G''<Esc>:w<CR>
+noremap! <F3> <Esc>gg=G''<Esc>:w<CR>
 " map <Leader><F3> :call <SID>StripTrailingWhitespaces()<CR>
 " F8 == <C-[>OW
 
@@ -153,8 +154,8 @@ let g:html_indent_inctags = "body,head,li,tbody"
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
-nnoremap <silent> n   n:call HLNext(0.4)<cr>
-nnoremap <silent> N   N:call HLNext(0.4)<cr>
+nnoremap <silent> n   n:call HLNext(0.3)<cr>
+nnoremap <silent> N   N:call HLNext(0.3)<cr>
 
 " EITHER blink the line containing the match...
 function! HLNext (blinktime)
@@ -167,6 +168,9 @@ endfunction
 
 nnoremap  ;  :
 "nnoremap  :  ;
+
+" i still don't know what q: is supposed to do, but lets not do it
+map q: :q
 
 "Commenting blocks of code.
 if has("autocmd")
