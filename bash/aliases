@@ -20,11 +20,16 @@ alias la='ls -A'
 alias l='ls -CF'
 
 
-if [ $TERM = 'xterm-256color' ]; then
-    alias screen="TERM=screen-256color screen -T screen-256color"
+if [ -x "screen" ]; then
+    if [ $TERM = 'xterm-256color' ]; then
+        alias screen="TERM=screen-256color screen -T screen-256color"
+    else
+        alias screen="TERM=screen screen"
+    fi
 else
-    alias screen="TERM=screen screen"
+    alias screen="tmux"
 fi
+
 
 alias more='less'
 
