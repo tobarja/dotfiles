@@ -1,28 +1,32 @@
 set nocompatible
+filetype off
 
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " My bundles
-Bundle 'Shougo/neocomplcache.vim'
+Plugin 'Shougo/neocomplcache.vim'
 let g:neocomplcache_enable_at_startup = 1
-Bundle 'Raimondi/delimitMate'
-Bundle 'Yggdroot/indentLine'
-Bundle 'terryma/vim-expand-region'
-Bundle 'tpope/vim-fugitive'
-Bundle 'kien/ctrlp.vim'
-Bundle 'reinh/vim-makegreen'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'hynek/vim-python-pep8-indent'
-Bundle '2072/PHP-Indenting-for-VIm'
-Bundle 'tell-k/vim-autopep8'
+Plugin 'Raimondi/delimitMate'
+Plugin 'Yggdroot/indentLine'
+Plugin 'terryma/vim-expand-region'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'reinh/vim-makegreen'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'hynek/vim-python-pep8-indent'
+Plugin '2072/PHP-Indenting-for-VIm'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'tell-k/vim-autopep8'
 "let g:autopep8_disable_show_diff=1
 noremap <buffer> <F8> :call Autopep8()<CR><C-L>
+
+call vundle#end()
 
 set mouse=nv
 let mapleader = ","
