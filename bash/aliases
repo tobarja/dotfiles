@@ -7,6 +7,9 @@ alias ....="cd ../../.."
 # Enable aliases to be sudo.ed
 alias sudo='sudo '
 
+# Really su, for /bin/false accounts
+alias rsu='su -s /bin/bash - '
+
 # Gzip-enabled `curl`
 alias gurl="curl --compressed"
 
