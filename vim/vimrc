@@ -70,7 +70,6 @@ if has("autocmd")
     filetype indent plugin on
 endif
 
-set expandtab
 set smarttab
 
 set tabstop=4
