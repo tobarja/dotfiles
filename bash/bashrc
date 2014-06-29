@@ -9,7 +9,7 @@ case $- in
 esac
 
 # some environment defaults
-EMAIL="Andrew Thompson <andrewkt@aktzero.com>"
+EMAIL="Andrew Thompson <andrew@tobarja.com>"
 EDITOR="vi"
 
 # Add `~/bin` to the `$PATH`
