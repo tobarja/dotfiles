@@ -1,0 +1,3 @@
+alias rsu='su -s /bin/bash - '
+
+export HISTFILE=/root/.bash_hist-$(who am i | awk '{print $1}';exit)
