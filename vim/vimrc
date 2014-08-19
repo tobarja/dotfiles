@@ -21,7 +21,8 @@ Plugin 'reinh/vim-makegreen'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin '2072/PHP-Indenting-for-VIm'
-Plugin 'jnwhiteh/vim-golang'
+Plugin 'fatih/vim-go'
+Plugin 'majutsushi/tagbar'
 Plugin 'tell-k/vim-autopep8'
 "let g:autopep8_disable_show_diff=1
 noremap <buffer> <F8> :call Autopep8()<CR><C-L>
