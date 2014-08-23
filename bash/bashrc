@@ -59,6 +59,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
+    linux) color_prompt=yes;;
     xterm-color) color_prompt=yes;;
     xterm-256color) color_prompt=yes;;
     screen) color_prompt=yes;;
@@ -86,6 +87,10 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+if [ "$color_prompt" = yes ]; then
+    source ~/.shell_colors
+fi
+
 function __gitprompt()
 {
     GIT_BRANCH=`git rev-parse --abbrev-ref HEAD 2>/dev/null`
@@ -102,7 +107,7 @@ function __gitprompt()
 
 function set_color_prompt()
 {
-    PS1="${debian_chroot:+($debian_chroot)}$BGreen\u@\h$Color_Off:$BWhite$PathShort$(__gitprompt)$Color_Off$NewLine\$ "
+    PS1="${debian_chroot:+($debian_chroot)}$BGreen\u@\h$Color_Off$(__gitprompt)$NewLine$BWhite$PathShort$Color_Off \$ "
 }
 
 if [ "$color_prompt" = yes ]; then
