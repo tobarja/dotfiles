@@ -1,0 +1,2 @@
+#!/bin/bash
+rdesktop -z -g 1363x715 $1 &
