@@ -81,6 +81,23 @@ set modeline
 
 set scrolloff=5 " keep at least 5 lines above/below
 
+nnoremap <Leader>tt :TagbarToggle<CR>
+let g:tagbar_width = 25
+let g:tagbar_type_go = {
+    \ 'ctagstype': 'go',
+    \ 'kinds' : [
+        \'p:package',
+        \'f:function',
+        \'v:variables',
+        \'t:type',
+        \'c:const'
+    \]
+\}
+if has("autocmd")
+    autocmd VimEnter * nested :call tagbar#autoopen(1)
+    autocmd FileType * nested :call tagbar#autoopen(0)
+endif
+
 " Highlight line under cursor
 " set cursorline
 " hi CursorLine term=none cterm=none
