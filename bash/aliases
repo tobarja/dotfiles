@@ -49,8 +49,6 @@ fi
 
 alias tmux="tmux attach || tmux"
 
-alias rdesktop="rdesktop -z -g 1360x715"
-
 alias ack='ack-grep'
 alias code='cd ~/code'
 alias cdgs='cd ~/code/go/src/'

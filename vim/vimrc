@@ -15,13 +15,13 @@ let g:neocomplcache_enable_at_startup = 1
 Plugin 'Raimondi/delimitMate'
 Plugin 'Yggdroot/indentLine'
 Plugin 'terryma/vim-expand-region'
-Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'reinh/vim-makegreen'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin '2072/PHP-Indenting-for-VIm'
 Plugin 'fatih/vim-go'
+Plugin 'Blackrush/vim-gocode'
 Plugin 'majutsushi/tagbar'
 Plugin 'tell-k/vim-autopep8'
 "let g:autopep8_disable_show_diff=1
@@ -192,17 +192,3 @@ nnoremap  ;  :
 
 " i still don't know what q: is supposed to do, but lets not do it
 map q: :q
-
-"Commenting blocks of code.
-if has("autocmd")
-    let b:comment_leader = ''
-    autocmd FileType c,cpp,java,php,scala let b:comment_leader = '// '
-    autocmd FileType sh,ruby,python let b:comment_leader = '# '
-    autocmd FileType conf,fstab let b:comment_leader = '# '
-    autocmd FileType tex let b:comment_leader = '% '
-    autocmd FileType mail let b:comment_leader = '> '
-    autocmd FileType vim let b:comment_leader = '" '
-
-    noremap <silent> <Leader>cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
-    noremap <silent> <Leader>cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
-endif

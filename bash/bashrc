@@ -13,13 +13,12 @@ EMAIL="Andrew Thompson <andrew@tobarja.com>"
 EDITOR="vi"
 
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/bin/go/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
-export GOROOT=$HOME/bin/go
 export GOPATH=$HOME/code/go
 
 #this is for rvm
