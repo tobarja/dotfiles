@@ -45,3 +45,6 @@
 [push]
     default = upstream
     #simple is not supported on ubuntu 12.04LTS because git is too old
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
