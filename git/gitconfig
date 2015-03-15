@@ -17,6 +17,7 @@
     co = checkout
     cob = checkout -b
     difw = diff --word-diff
+    dc = diff --cached
     fpo = format-patch --stdout
     fp = format-patch
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
@@ -28,6 +29,7 @@
     rem = remote -v
     scrub = checkout --
     stat = status -sb
+    track = branch --track
     unstage = reset HEAD
     uncommit = reset --soft HEAD^
     up = !git fetch origin && git rebase origin/master
