@@ -1,2 +1,2 @@
 #!/bin/bash
-rdesktop -z -u itsupport -d rossresorts -g 1363x715 $1 &
+rdesktop -z -u itsupport -d rossresorts -g 1363x718 $1 &
