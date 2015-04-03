@@ -4,4 +4,4 @@ xrandr | grep '*' | grep -q '1600x900'
 if [ $? -eq 0 ]; then
 	RESOLUTION='1596x875'
 fi
-rdesktop -z -P -u athompson -d warehouse -g $RESOLUTION $1 $2 $3 $4 &
+rdesktop -z -P -u athompson -d warehouse -g $RESOLUTION $@ &

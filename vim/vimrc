@@ -15,7 +15,7 @@ let g:neocomplcache_enable_at_startup = 1
 Plugin 'Raimondi/delimitMate'
 Plugin 'Yggdroot/indentLine'
 Plugin 'terryma/vim-expand-region'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'reinh/vim-makegreen'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'hynek/vim-python-pep8-indent'
@@ -170,7 +170,8 @@ noremap! <F3> <Esc>gg=G''<Esc>:w<CR>
 noremap <buffer> <F5> <Esc>:w<CR>:!./% <CR>
 noremap <buffer> <C-[>OT <Esc>:w<CR>:!./% <CR>
 
-let g:html_indent_inctags = "body,head,li,tbody"
+"let g:html_indent_inctags = "body\|head\|li\|tbody\|p"
+let g:html_indent_inctags = 'body,head,li,tbody,p'
 
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)

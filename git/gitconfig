@@ -32,21 +32,16 @@
     track = branch --track
     unstage = reset HEAD
     uncommit = reset --soft HEAD^
-    up = !git fetch origin && git rebase origin/master
-
-[sendemail]
-    supressfrom = true
 
 [color]
     ui = auto
 
 [merge]
     ff = only
-    summary=true
 
 [push]
-    default = upstream
-    #simple is not supported on ubuntu 12.04LTS because git is too old
+    default = simple
+    #simple is not supported by older git version, use upstream instead
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/
