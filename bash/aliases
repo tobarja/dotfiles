@@ -40,6 +40,7 @@ alias authload='export `cat ~/.sshauth-$HOSTNAME`'
 
 alias free="free -m"
 alias du1='du -h --max-depth=1'
+alias dfd="df -h | egrep --color=never '^(/dev|File)'"
 
 alias is_x64='grep -q "^flags.*\blm\b" /proc/cpuinfo && echo "x86_64" || echo "not x86_64"'
 

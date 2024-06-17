@@ -2,32 +2,32 @@ set nocompatible
 filetype off
 
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#begin()
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Plugin 'gmarik/vundle'
+"Plugin 'gmarik/vundle'
 
 " My bundles
-Plugin 'Shougo/neocomplcache.vim'
-let g:neocomplcache_enable_at_startup = 1
-Plugin 'Raimondi/delimitMate'
-Plugin 'Yggdroot/indentLine'
-Plugin 'terryma/vim-expand-region'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'reinh/vim-makegreen'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin '2072/PHP-Indenting-for-VIm'
-Plugin 'fatih/vim-go'
-Plugin 'Blackrush/vim-gocode'
-Plugin 'majutsushi/tagbar'
-Plugin 'tell-k/vim-autopep8'
+"Plugin 'Shougo/neocomplcache.vim'
+"let g:neocomplcache_enable_at_startup = 1
+"Plugin 'Raimondi/delimitMate'
+"Plugin 'Yggdroot/indentLine'
+"Plugin 'terryma/vim-expand-region'
+"Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'reinh/vim-makegreen'
+"Plugin 'airblade/vim-gitgutter'
+"Plugin 'hynek/vim-python-pep8-indent'
+"Plugin '2072/PHP-Indenting-for-VIm'
+"Plugin 'fatih/vim-go'
+"Plugin 'Blackrush/vim-gocode'
+"Plugin 'majutsushi/tagbar'
+"Plugin 'tell-k/vim-autopep8'
 "let g:autopep8_disable_show_diff=1
-noremap <buffer> <F8> :call Autopep8()<CR><C-L>
+"noremap <buffer> <F8> :call Autopep8()<CR><C-L>
 
-call vundle#end()
+"call vundle#end()
 
 set mouse=nv
 let mapleader = ","
