@@ -1,0 +1,21 @@
+#!/bin/bash
+
+ALIAS_FILE="$HOME/.bash_aliases"
+
+if [ ! -f "$ALIAS_FILE" ]; then
+    echo "Error: Alias file '$ALIAS_FILE' not found." >&2
+    exit 1
+fi
+
+TEMP_ERROR_FILE=$(mktemp)
+if ( set -e; source "$ALIAS_FILE" ) > /dev/null 2>"$TEMP_ERROR_FILE"; then
+    # If the subshell exited with status 0 (success)
+    source "$ALIAS_FILE"
+    rm "$TEMP_ERROR_FILE"
+else
+    # If the subshell exited with a non-zero status (failure)
+    echo "Error: Failed to source aliases in subshell:" >&2
+    cat "$TEMP_ERROR_FILE" >&2
+    rm "$TEMP_ERROR_FILE"
+    exit 1
+fi
