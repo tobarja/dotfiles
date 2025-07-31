@@ -8,30 +8,6 @@
     editor = vi
 
 [alias]
-    adp = add --patch
-    bo = checkout -p
-    br = branch
-    ci = commit
-    cim = commit -m
-    ca = commit --amend
-    co = checkout
-    cob = checkout -b
-    difw = diff --word-diff
-    dc = diff --cached
-    fpo = format-patch --stdout
-    fp = format-patch
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-    ll = log --graph --date=short
-    pff = pull --ff-only
-    pull = pull --ff-only
-    prb = pull -r
-    rem = remote -v
-    scrub = checkout --
-    stat = status -sb
-    track = branch --track
-    unstage = reset HEAD
-    uncommit = reset --soft HEAD^
 
 [color]
     ui = auto

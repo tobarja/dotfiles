@@ -11,7 +11,7 @@ alias sudo='sudo '
 alias rsu='su -s /bin/bash - '
 
 # Gzip-enabled `curl`
-alias gurl="curl --compressed"
+#alias gurl="curl --compressed"
 
 # My own, or pulled from other various places on the internet before now
 
@@ -36,21 +36,60 @@ fi
 
 alias more='less'
 
-alias authload='export `cat ~/.sshauth-$HOSTNAME`'
+#alias authload='export `cat ~/.sshauth-$HOSTNAME`'
 
-alias free="free -m"
+#alias free="free -m"
 alias du1='du -h --max-depth=1'
 alias dfd="df -h | egrep --color=never '^(/dev|File)'"
 
 alias is_x64='grep -q "^flags.*\blm\b" /proc/cpuinfo && echo "x86_64" || echo "not x86_64"'
 
-if [ -f ~/bin/fs_cli ]; then
-    alias fs="screen -R -D fs"
-fi
-
 alias tmux="tmux attach || tmux"
 
-alias ack='ack-grep'
-alias code='cd ~/code'
-alias aliases='vi ~/.dotfiles/bash/aliases'
+#alias ack='ack-grep'
+#alias code='cd ~/code'
+#alias aliases='vi ~/.dotfiles/bash/aliases'
 alias vi='vi -p'
+
+alias realias="source _realias"
+alias vimrc="vi ~/.vim/vimrc"
+
+alias g.adp="git add --patch"
+alias g.bo="git checkout -p"
+alias g.br="git branch"
+alias g.ci="git commit"
+alias g.cim="git commit -m"
+alias g.ca="git commit --amend"
+alias g.co="git checkout"
+alias g.cob="git checkout -b"
+alias g.dw="git diff -w"
+alias g.dc="git diff --cached"
+alias g.dcw="git diff --cached -w"
+alias g.dcww="git diff --cached -w --word-diff"
+alias g.fi="git show --name-only"
+alias g.find-main='f() { if git rev-parse --verify origin/main >/dev/null 2>&1; then echo origin/main; else echo origin/master; fi; }; f'
+alias g.fix="git commit --amend --no-edit"
+alias g.fpo="git format-patch --stdout"
+alias g.fp="git format-patch"
+alias g.lol="git log --graph --decorate --pretty=oneline --abbrev-commit"
+alias g.lolh="git log --graph --decorate --pretty=oneline --abbrev-commit -n 10"
+alias g.lola="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
+alias g.lolah="git log --graph --decorate --pretty=oneline --abbrev-commit -n 10 --all"
+alias g.ll="git log --graph --date=short"
+alias g.pff="git pull --ff-only"
+alias g.pin='git add -u && git commit -q -m "$(date +''%Y-%m-%d %H:%M:%S'')" && git status -s'
+alias g.pull="git pull --ff-only"
+alias g.prb="git pull -r"
+alias g.pto='git push -u origin $(git branch --show-current):$(git branch --show-current)'
+alias g.rbi='f() { git rebase -i HEAD~"$1"; }; f'
+alias g.rbc="git rebase --continue"
+alias g.rbd="git rebase origin/develop"
+alias g.rbm='git fetch origin && git rebase $(git find-main)'
+alias g.rem="git remote -v"
+alias g.root='cd $(git rev-parse --show-toplevel)'
+alias g.scrub="git checkout --"
+alias g.ss="git show --stat"
+alias g.stat="git status"
+alias g.tip='git fetch origin && git checkout -B tip $(git find-main)'
+alias g.unstage="git reset HEAD"
+alias g.uncommit="git reset --soft HEAD^"
